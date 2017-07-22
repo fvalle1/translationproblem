@@ -1,9 +1,13 @@
 import pandas as pd
 from translate import TranslationManager as tr
 
+in_file = open("KEYFILE","r")
+key = in_file.read()
+in_file.close()
+
 #paste here your key
 #get a key from https://cloud.google.com/translate/docs/getting-started
-translator=tr('')
+translator=tr(key)
 
 first_translation=translator.translate_text('en','Finito')
 print first_translation
